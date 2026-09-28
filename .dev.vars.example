@@ -1,0 +1,5 @@
+# ローカル開発用。コピーして .dev.vars にリネームしてください (git 管理外)
+SLACK_SIGNING_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SLACK_BOT_TOKEN=xoxb-xxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxx
+# 匿名投票の投票者IDをハッシュ化する際のシークレット (任意の長いランダム文字列)
+VOTER_HASH_SECRET=change-me-to-a-long-random-string

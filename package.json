@@ -1,0 +1,25 @@
+{
+  "name": "slack-swiss-katana",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Slack 上で完結するアンケート (poll) アプリ。Cloudflare Workers + D1 でホスティング。",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:create": "wrangler d1 create slack_poll",
+    "db:migrate:local": "wrangler d1 migrations apply slack_poll --local",
+    "db:migrate": "wrangler d1 migrations apply slack_poll --remote"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

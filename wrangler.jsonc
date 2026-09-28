@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "slack-swiss-katana",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-12-01",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "slack_poll",
+      // `npm run db:create` の出力に表示される database_id に置き換えてください
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+  // シークレットは wrangler secret put で登録します:
+  //   SLACK_SIGNING_SECRET, SLACK_BOT_TOKEN, VOTER_HASH_SECRET
+}

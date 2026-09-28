@@ -1,0 +1,41 @@
+{
+  "display_information": {
+    "name": "Poll",
+    "description": "Slack 上で完結するアンケートツール",
+    "background_color": "#2c2d30"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "poll",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/poll",
+        "url": "https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev/slack/commands",
+        "description": "アンケートを作成します",
+        "usage_hint": "<質問内容>",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "commands",
+        "chat:write",
+        "chat:write.public",
+        "im:write"
+      ]
+    }
+  },
+  "settings": {
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev/slack/interactions"
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
