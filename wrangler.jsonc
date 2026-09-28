@@ -8,8 +8,7 @@
     {
       "binding": "DB",
       "database_name": "slack_poll",
-      // `npm run db:create` の出力に表示される database_id に置き換えてください
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "database_id": "bf9c39c3-0a1e-4cd1-a1ff-072ea8dc6d88",
       "migrations_dir": "migrations"
     }
   ]
